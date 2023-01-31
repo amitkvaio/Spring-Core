@@ -1,22 +1,19 @@
 
-package com.lara;
+package rbi;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
-public class Manager01 {
+public class BankC {
 	public static void main(String[] args) {
 		ClassPathResource cpr = new ClassPathResource("beans.xml");
 		BeanFactory bf = new XmlBeanFactory(cpr);
-		System.out.println("******************");
-		Person p = (Person) bf.getBean("p1");
+		RBI sbi =  bf.getBean("bankId",RBI.class);
+		sbi.rbiRules();
 		System.out.println("===========================");
 
-		System.out.println(p.getFirstName());
-		System.out.println(p.getLastName());
-		System.out.println(p.getAge());
-		System.out.println(p.getClass().getName());
+		 
 		System.out.println("done");
 	}
 }

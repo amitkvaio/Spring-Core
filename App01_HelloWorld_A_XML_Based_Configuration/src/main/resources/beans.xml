@@ -4,11 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="p1" class="com.lara.Person">
-
 		<property name="firstName" value="amit" />
 		<property name="lastName" value="kumar" />
 		<property name="age" value="25" />
 	</bean>
+	
+	<!-- <bean id="bankId" class="rbi.SBI"/> -->
+	<!-- <bean id="bankId" class="rbi.HDFC"/> -->
+	<bean id="bankId" class="rbi.PNB"/>
 
 </beans>
  
