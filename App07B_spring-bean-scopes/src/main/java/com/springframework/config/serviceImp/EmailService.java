@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import com.springframework.config.service.MessageService;
 
 @Service
-//@Scope("prototype")
-@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
+@Scope("prototype")
+//@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class EmailService implements MessageService{
 
 	public void sendMsg(String message) {

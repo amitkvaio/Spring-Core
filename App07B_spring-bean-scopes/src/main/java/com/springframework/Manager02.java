@@ -12,15 +12,15 @@ public class Manager02 {
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
 		MessageService messageService1 = applicationContext.getBean(EmailService.class);
 		messageService1.sendMsg("Sending message by email-1");
-		System.out.println("*************************************>"+messageService1);
+		System.out.println(messageService1 +"=="+messageService1);
 		
 		MessageService messageService2 = applicationContext.getBean(EmailService.class);
 		messageService2.sendMsg("Sending message by email-2");
-		System.out.println("*************************************>"+messageService2);
+		System.out.println(messageService2 +"=="+messageService2);
 		
 		MessageService messageService3 = applicationContext.getBean(EmailService.class);
 		messageService3.sendMsg("Sending message by email-3");
-		System.out.println("*************************************>"+messageService3);
+		System.out.println(messageService3 +"=="+messageService3);
 		System.out.println("Done");
 		
 	}

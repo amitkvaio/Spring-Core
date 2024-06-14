@@ -12,16 +12,16 @@ public class Manager01 {
 		
 		UserService  userService = applicationContext.getBean(UserService.class);
 		userService.setName("Singleton");
-		System.out.println(userService.getName());
+		System.out.println(userService.getName() +"=="+userService);
 		
 		UserService  userService1 = applicationContext.getBean(UserService.class);
-		System.out.println(userService1.getName());
+		System.out.println(userService1.getName()+"=="+userService1);
 		
 		UserService  userService2 = applicationContext.getBean(UserService.class);
-		System.out.println(userService2.getName());
+		System.out.println(userService2.getName()+"=="+userService2);
 		
 		UserService  userService3 = applicationContext.getBean(UserService.class);
-		System.out.println(userService3.getName());
+		System.out.println(userService3.getName()+"=="+userService3);
 	}
 }
 
